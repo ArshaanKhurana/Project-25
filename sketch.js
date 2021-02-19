@@ -39,8 +39,6 @@ function setup() {
 	dustbin2 = new Dustbin(675,545,10,90);
 	dustbin3 = new Dustbin(770,545,10,90);
 
-	dustbin = createSprite(675,545,10,90);
-	dustbin = loadImage(dustbinImg)
  
 }
 
@@ -55,7 +53,7 @@ function draw() {
 	dustbin2.display();
 	dustbin3.display();
 	paper1.display();
-	dustbin.display();
+	image(dustbinImg,675, 500,100,100);
 	drawSprites();
 
 }
