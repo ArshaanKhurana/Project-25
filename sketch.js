@@ -60,7 +60,7 @@ function draw() {
 
 function keyPressed() {
      if(keyCode===38){
-		Matter.Body.applyForce(paper1.body,paper1.body.position,{x:100,y:-100})
+		Matter.Body.applyForce(paper1.body,paper1.body.position,{x:45,y:-50})
 	 }
 	}
 
