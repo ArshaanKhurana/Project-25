@@ -32,7 +32,7 @@ function setup() {
 
 
 
-	paper1 = new Paper(100, 300, 10);
+	paper1 = new Paper(100, 300, 50);
 
 
 	dustbin1 = new Dustbin(720, 590, 100, 10);
@@ -45,7 +45,7 @@ function setup() {
 
 function draw() {
 	rectMode(CENTER);
-	background(0);
+	background(180);
 	Engine.update(engine);
 
 	rect(ground1.position.x, ground1.position.y, width, 10)
@@ -53,14 +53,15 @@ function draw() {
 	dustbin2.display();
 	dustbin3.display();
 	paper1.display();
-	image(dustbinImg,675, 500,100,100);
+	image(dustbinImg,660,495,130,105);
 	drawSprites();
 
 }
 
 function keyPressed() {
-
-		Matter.Body.applyForce(paper1.body,paper1.body.position,{x:4,y:-4})
+     if(keyCode===38){
+		Matter.Body.applyForce(paper1.body,paper1.body.position,{x:100,y:-100})
+	 }
 	}
 
 

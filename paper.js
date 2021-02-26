@@ -1,7 +1,7 @@
 class Paper {
     constructor(x, y, r) {
 
-        this.image = loadImage("white hat jr paper.png");
+        this.image = loadImage("paper.png");
         var options = {
             isStatic: false,
             restitution: 0.3,
@@ -18,10 +18,8 @@ class Paper {
         var pos = this.body.position;
         push()
         translate(pos.x, pos.y);
-        ellipseMode(RADIUS)
-        strokeWeight(3);
-        fill("red")
-        ellipse(0, 0, this.r, this.r);
+        imageMode(CENTER)
+        image(this.image,0,0,this.r,this.r)
         pop()
     }
 }
